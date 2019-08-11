@@ -1,5 +1,6 @@
 ---
 title: Mentors
+layout: wide
 ---
 
-**under development**
+{% include people-table.html type="mentor" title="Mentors" %}

@@ -1,5 +1,8 @@
 ---
 title: Researchers
+layout: wide
 ---
 
-**under development**
+{% include people-table.html type="researcher" title="Researchers" %}
+
+
