@@ -30,6 +30,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  people:
+    output: true
+    permalink: /:collection/:path/
 
 
 defaults:
@@ -43,6 +46,11 @@ defaults:
       type: "projects"
     values:
       layout: project
+  - scope:
+      path: "_people"
+      type: "people"
+    values:
+      layout: person
   -
     scope:
       path: ""
@@ -86,7 +94,7 @@ excerpt_length: 50
 timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /posts/:year-:month-:day-:title/
 paginate: 5
 
 kramdown:

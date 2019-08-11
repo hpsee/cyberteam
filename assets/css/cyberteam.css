@@ -31,10 +31,18 @@ exclude_in_search: true
   color: white !important;
 }
 
+.btn {
+  color: white !important;
+}
+
 .text-primary {
   color: #8e85d1 !important;
 }
 
 .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
     color: rgb(142, 133, 209) !important;
+}
+
+#sidebarToggle {
+  background-color: #79b7d2 !important;
 }
