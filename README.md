@@ -1,5 +1,7 @@
 # NorthEast Cyberteam
 
+![assets/img/logo.png](assets/img/logo.png)
+
 ## Template
 
 This is derived from [sb-admin-jekyll](https://www.github.com/vsoch/sb-admin-jekyll/).

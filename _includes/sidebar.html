@@ -9,7 +9,7 @@
       <hr class="sidebar-divider my-0">
 
       {% for section in site.data.toc %}{% if section.url %}
-      <li class="nav-item {% if forloop.first %}active{% endif %}">
+      <li class="nav-item">
         <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}/{{ section.url }}">
           {% if section.icon %}<i class="fas fa-fw {{ section.icon }}"></i>{% endif %}
           <span>{{ section.title }}</span></a>

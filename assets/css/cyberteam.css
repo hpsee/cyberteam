@@ -17,17 +17,18 @@ exclude_in_search: true
   color: #007baf !important;
 }
 
-.sidebar .nav-link, .sidebar .fas {
+.sidebar .nav-link, .sidebar-heading, .sidebar .fas {
   color: #007baf !important;
 }
 
 .sidebar-divider {
-  color: 1px solid rgba(78, 145, 193, 0.18);
+  border: 1px solid rgba(78, 145, 193, 0.18) !important;
 }
 
 .btn-primary, .badge-primary {
   background-color: #8e85d1 !important;
   border: none !important;
+  color: white !important;
 }
 
 .text-primary {
