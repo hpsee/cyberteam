@@ -29,7 +29,7 @@ $(document).ready(function() {
 <td>{{ student.name }}</td>
 <td>{{ student.institution }}</td>
 <td>{{ student.program }}</td>
-<td>{% for tag in student.interests %}<a href="{{ site.baseurl }}/tags#{{- tag -}}"><span class="badge badge-primary">{{- tag -}}</span></a>{% endfor %}</td>
+<td>{% for tag in student.interests %}<a href="{{ site.baseurl }}/tags#{{- tag -}}"><span class="badge badge-primary">{{- tag -}}</span></a> {% endfor %}</td>
 <td><a href="{{ site.baseurl }}/{{ student.url }}"><button class="btn btn-primary btn-sm">Profile</button></a></td>
 </tr>{% endif %}{% endfor %}
 </tbody>
