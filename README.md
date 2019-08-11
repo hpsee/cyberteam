@@ -1,15 +1,9 @@
-# SB Admin Jekyll
+# NorthEast Cyberteam
 
-This is a Jekyll version of the beautiful [sb-admin](https://startbootstrap.com/themes/sb-admin-2/) 
-provided by Startbootrap for Boostrap 4. It's been modified for Jekyll use, meaning that graphs are
-generated from data, and the main content (with posts) is supported.
+## Template
 
-![assets/img/theme/sb-admin-jekyll-1.png](assets/img/theme/sb-admin-jekyll-1.png)
-
-## License
-
-The original site, Startbootstrap Admin 2, is developed by [Blackrock Digital](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2) and the [LICENSE](BLACKROCK-LICENSE) is included here. The Jekyll version
-and other customizations are done by @vsoch.
+This is derived from [sb-admin-jekyll](https://www.github.com/vsoch/sb-admin-jekyll/).
+You can [view the template](https://vsoch.github.io/sb-admin-jekyll/) to see how the theme works.
 
 ## Previewing the Site Locally
 

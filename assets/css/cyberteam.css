@@ -1,0 +1,39 @@
+---
+layout: null
+exclude_in_search: true
+---
+
+.cyberteam-sidebar {
+  background-image: url({{ site.baseurl }}/assets/img/background.jpg) !important;
+  color: black;
+}
+
+.cyberteam-logo {
+  margin-top:20px;
+  max-width:100%;
+}
+
+.sidebar-brand, a {
+  color: #007baf !important;
+}
+
+.sidebar .nav-link, .sidebar .fas {
+  color: #007baf !important;
+}
+
+.sidebar-divider {
+  color: 1px solid rgba(78, 145, 193, 0.18);
+}
+
+.btn-primary, .badge-primary {
+  background-color: #8e85d1 !important;
+  border: none !important;
+}
+
+.text-primary {
+  color: #8e85d1 !important;
+}
+
+.sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
+    color: rgb(142, 133, 209) !important;
+}
