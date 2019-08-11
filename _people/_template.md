@@ -5,5 +5,7 @@ institution:
 program:
 hpc-experience:
 interests:
+twitter:
+github:
 ---
 

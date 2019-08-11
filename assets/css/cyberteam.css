@@ -46,3 +46,7 @@ exclude_in_search: true
 #sidebarToggle {
   background-color: #79b7d2 !important;
 }
+
+.scroll-to-top {
+   color: white !important;
+}
