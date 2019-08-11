@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+  <div class="row" style="padding-top:20px">
+    <div class="col-lg-{% if page.projects %}6{% else %}12{% endif %}">
+
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
+        </div>
+        <div class="card-body">
+
+     <h1 style="margin-bottom:20px" class="mb-2 text-gray-800">{{ page.name }}</h1>
+     <hr>
+
+     {% if page.image %}<img style="float:right" src="{{ site.baseurl }}/assets/img/people/{{ page.image }}">{% endif %}
+
+     <p><h3>HPC Experience</h3> {{ page.hpc-experience }}</p> 
+     <p><h3>Interests:</h3> {{ page.interests }}</p>
+
+      {% if page.tags.size > 0 %}<div class="blog-tags">
+          {% if site.link-tags %}{% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags#{{- tag -}}"><span class="badge badge-primary">{{- tag -}}</span></a>
+          {% endfor %}{% else %}{{ page.tags | join: ", " }}{% endif %}
+        </div>{% endif %}
+
+      {% include buttons/text-split-button.html style="success" left="Status" right=page.status %}
+      <div class="my-2"></div>
+      {% include buttons/text-split-button.html style="warning" left="Institution" right=page.institution %}
+      <div class="my-2"></div>
+      {% include buttons/text-split-button.html style="secondary" left="Current Program" right=page.program %}
+      <div class="my-2"></div>
+
+      <hr>
+
+      {% if page.previous.url %}
+      <a style="float:left"  href="{{ page.previous.url | prepend: site.baseurl }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-chevron-left fa-sm text-white-50"></i> {{ page.previous.title }}</a>
+      {% endif %}{% if page.next.url %}
+      <a style="float:right" href="{{ page.next.url | prepend: site.baseurl }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">{{ page.next.title }} <i class="fas fa-chevron-right fa-sm text-white-50"></i></a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% if page.projects %}<div class="col-lg-6"><!--TODO: this should populate with student's projects-->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+    </div>
+    <div class="card-body">
+    </div>
+  </div>
+</div>{% endif %}
