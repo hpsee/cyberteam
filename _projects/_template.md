@@ -7,7 +7,7 @@ image:
 # see https://hpsee.github.io/cyberteam/tags/
 tags: [one, two]
 
-# One of "New and recruiting"
+# One of "New and recruiting" "In progress" "Finishing up" "Complete"
 status:
 project_institution: 
 anchor_institution: 

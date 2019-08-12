@@ -4,10 +4,10 @@
     <li data-target="#showcase" data-slide-to="{{ forloop.count }}"></li>{% endfor %}
   </ol>
   <div class="carousel-inner">{% for project in site.projects %}
-    <div class="carousel-item {% if forloop.first %}active{% endif %}" style="width:100%; height:200px; background-color:{{ colors | sample }}">
-      <img class="d-block" src="{% if project.image %}{{ site.baseurl }}/assets/img/projects/{{ project.image }}{% elsif project.external_url %}{{ project.external_url }}{% else %}https://picsum.photos/640/200?title={{ project.title }}{% endif %}" alt="{{ project.title }}">
-         <div class="carousel-caption"><a style="text-decoration:none; color:white" href="{{ site.baseurl }}/{{ project.url }}">
-            <h3 style="float:right; color:white">{{ project.title }}</h3>
+    <div class="carousel-item {% if forloop.first %}active{% endif %}" style="width:100%; height:200px; background-color:{{ colors | sample }}">{% if project.image %}
+      <img class="d-block" src="{% if project.image %}{{ site.baseurl }}/assets/img/projects/{{ project.image }}{% elsif project.external_url %}{{ project.external_url }}{% endif %}" alt="{{ project.title }}">{% endif %}
+         <div class="carousel-caption"><a style="{% if project.image %}right: 5%;{% endif %}text-decoration:none; color:white" href="{{ site.baseurl }}/{{ project.url }}">
+            <h3 style="{% if project.image %}float:right;{% elsif project.external_url %}float:right;{% endif %} color:white">{{ project.title }}</h3>
             <p style="color:white">{{ project.description }}</p></a>
          </div>
     </div>{% endfor %}

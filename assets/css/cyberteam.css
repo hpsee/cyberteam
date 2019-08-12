@@ -7,10 +7,6 @@ exclude_in_search: true
   max-width: 100% !important;
 }
 
-.carousel-caption {
-  right: 5% !important;
-}
-
 .cyberteam-sidebar {
   background-image: url({{ site.baseurl }}/assets/img/background.jpg) !important;
   color: black;
