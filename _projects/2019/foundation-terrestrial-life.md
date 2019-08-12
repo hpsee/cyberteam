@@ -1,5 +1,5 @@
 ---
-title: "The foundation of terrestrial life: Inferring a total-evidence timeline of vascular plant evolution"
+title: "The Foundation of Terrestrial life: Inferring plant evolution"
 image: land-plant-phylogeny.png
 tags: [HPC]
 status: In progress

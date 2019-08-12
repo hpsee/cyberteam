@@ -1,5 +1,5 @@
 ---
-title: Using station data and downscaled reanalysis to assess the occurrence of extreme weather
+title: Assessing the occurrence of extreme weather
 image: nam_prcp.png
 tags: [data handling]
 status: Finishing up
