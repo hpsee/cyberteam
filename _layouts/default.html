@@ -2,7 +2,6 @@
 <html lang="en">
 
   {% include head.html %}
-
   <body id="page-top">
     <div id="wrapper">
     {% include sidebar.html %}
@@ -10,7 +9,7 @@
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         {% include navigation.html %}
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding-left:0px; padding-right:0px;">
         {{ content }}
         <a class="scroll-to-top rounded" href="#page-top">
           <i class="fas fa-angle-up"></i>

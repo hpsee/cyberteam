@@ -10,7 +10,7 @@
           subtitle: "About Projects:"
           url: "/projects/"
         - title: Submit a Project
-          url: "docs/projects/submit/"
+          url: "pages/projects/submit/"
 - title: Membership
   links:
     - title: People
