@@ -18,13 +18,19 @@ layout: default
 
      {% if page.image %}<img style="float:right" src="{{ site.baseurl }}/assets/img/people/{{ page.image }}">{% endif %}
 
-     {% if page.hpc-experience %}<p><h3>HPC Experience</h3> {{ page.hpc-experience }}</p>{% endif %}
+      {% if page.hpc-experience %}<p><h3>HPC Experience</h3> {{ page.hpc-experience }}</p>{% endif %}
 
       {% include buttons/text-split-button.html style="success" left="Status" right=page.status %}
+
+      <!-- Students have program, mentors have occupation and degree-->
+      {% if page.occupation %}<div class="my-2"></div>
+      {% include buttons/text-split-button.html style="warning" left="Current Occupation" right=page.occupation %}{% endif %}
       {% if page.institution %}<div class="my-2"></div>
       {% include buttons/text-split-button.html style="warning" left="Institution" right=page.institution %}{% endif %}
       <div class="my-2"></div>{% if page.program %}
       {% include buttons/text-split-button.html style="secondary" left="Current Program" right=page.program %}
+      {% endif %}{% if page.degree %}
+      {% include buttons/text-split-button.html style="secondary" left="Degree" right=page.degree %}
       {% endif %}
 
     <div style="float:right">

@@ -25,7 +25,7 @@ $(document).ready(function() {
 <th>Interests</th>
 <th>URL</th></tr>
 </tfoot>
-<tbody>{% for student in site.people %}{% if student.status == include.type %}<tr>
+<tbody>{% for student in site.people %}{% if student.status contains include.type %}<tr>
 <td>{{ student.name }}</td>
 <td>{{ student.institution }}</td>
 <td>{{ student.program }}</td>
