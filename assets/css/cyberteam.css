@@ -35,10 +35,13 @@ pre {
   border: 1px solid rgba(78, 145, 193, 0.18) !important;
 }
 
+.badge {
+  color: white !important;
+}
+
 .btn-primary, .badge-primary {
   background-color: #8e85d1 !important;
   border: none !important;
-  color: white !important;
 }
 
 .btn {

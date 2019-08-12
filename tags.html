@@ -1,6 +1,6 @@
 ---
 layout: wide
-title: 'Tag Index'
+title: Tag Index
 ---
 
 {%- capture site_tags -%}
@@ -17,9 +17,9 @@ title: 'Tag Index'
 {% assign all_tags = site_tags | append:interest_tags %}
 {%- assign tags_list = all_tags | split:',' | uniq | sort -%}
 
-  <div class="col-md-8">
-  <div id="full-tags-list">
-    {% for tag in tags_list %}{% if tag %}<h3 id="{{ tag }}" class="linked-section">{{ tag }}</h3>
+<div class="row">
+    <div class="col-md-9">
+    {% for tag in tags_list %}{% if tag %}<h2 id="{{ tag | replace: '/', '-' }}" class="linked-section">{{ tag }}</h2>
     <div class="post-list" style="margin-bottom:50px">
         {% for post in site.tags[tag] %}<div class="tag-entry">
                 <a href="{{- site.url -}}{{- post.url -}}">{{- post.title -}}</a>
@@ -31,5 +31,57 @@ title: 'Tag Index'
                      <time datetime="{{- post.date | date_to_xmlschema -}}"> {{- person.date | date: "%B %d, %Y" -}}</time>
             </div>{% endif %}{% endfor %}
     </div>{% endif %}{%- endfor -%}
-  </div>
+    </div>
+    <div class="col-md-3">
+      <div id="toc"></div>
+    </div>
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+
+    var toc = $('#toc');
+      sections = $('#the-content').find("h2");
+      $.each(sections, function(idx, v) {
+          section = $(v);
+          var div_id = $(section).attr('id');
+          if (div_id != "") {
+
+              var div_text = section.text().split('¶')[0];
+              var parent = $("#" + div_id)
+              var content = '<a style="color:white" href="#' + div_id + '" title="' + div_text +'"><span class="badge badge-primary" id="link_' + div_id + '">' + div_text +'</span></a><br>';
+              $(toc).append(content);
+
+              // Add section code to subnavigation
+              var children = $('<ul></ul>')
+              var contenders = $("#" + div_id).nextUntil("h2");
+              $.each(contenders, function(idx, contender){
+                 if($(contender).is('h3')) {
+                     var contender_id = $(contender).attr('id');
+                     var contender_text = $(contender).text().split('¶')[0];
+                     var content = '<li><a href="#' + contender_id + '" title="' + contender_text +'">' + contender_text +'</a></li>';
+                     children.append(content);
+                  }
+                })
+               if(children.text().length > 0 ) {
+                 $("#link_" + div_id).append(children);
+               }
+           }
+      });
+
+      // Adjust toc on scroll
+     $(function(){
+       var _top = $(window).scrollTop();
+       $(window).scroll(function(){
+          var _cur_top = $(window).scrollTop();
+          if (_cur_top >= 100){
+            $('#toc').css('top', _cur_top - 100)
+          }
+       });
+     });
+});
+</script>
