@@ -3,6 +3,10 @@ layout: null
 exclude_in_search: true
 ---
 
+.carousel {
+  max-width: 100% !important;
+}
+
 .cyberteam-sidebar {
   background-image: url({{ site.baseurl }}/assets/img/background.jpg) !important;
   color: black;
