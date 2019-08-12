@@ -58,6 +58,32 @@ excluded_in_search: true
 				}
 				{% assign added = true %}
 			{% endunless %}
+		{% endfor %}{% for person in site.people %}
+			{% unless person.excluded_in_search %}
+				{% if added %},{% endif %}
+				{% assign added = false %}
+				"{{ person.url | slugify }}": {
+					"id": "{{ person.url | slugify }}",
+					"title": "{{ person.name | xml_escape }}",
+					"categories": "{{ person.interests | join: ", " | xml_escape }}",
+					"url": " {{ person.url | xml_escape }}",
+					"content": {{ person.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
+				}
+				{% assign added = true %}
+			{% endunless %}
+		{% endfor %}{% for project in site.projects %}
+			{% unless project.excluded_in_search %}
+				{% if added %},{% endif %}
+				{% assign added = false %}
+				"{{ project.url | slugify }}": {
+					"id": "{{ project.url | slugify }}",
+					"title": "{{ project.title | xml_escape }}",
+					"categories": "{{ project.tags | join: ", " | xml_escape }}",
+					"url": " {{ project.url | xml_escape }}",
+					"content": {{ project.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
+				}
+				{% assign added = true %}
+			{% endunless %}
 		{% endfor %}
 	};
 </script>
