@@ -3,19 +3,7 @@ layout: wide
 title: Tag Index
 ---
 
-{%- capture site_tags -%}
-    {%- for tag in site.tags -%}{% if tag %}
-        {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%}
-    {% endif %}{%- endfor -%}
-{%- endcapture -%}
-
-{% assign interest_tags = "" %}
-{% for person in site.people %}
-  {% assign ttags = person.interests | join:',' | append:',' %}
-  {% assign interest_tags = interest_tags | append:ttags %}
-{% endfor %}
-{% assign all_tags = site_tags | append:interest_tags %}
-{%- assign tags_list = all_tags | split:',' | uniq | sort -%}
+{% capture site_tags %}{% for tag in site.tags %}{% if tag %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endcapture %}{% assign interest_tags = "" %}{% for person in site.people %}{% assign ttags = person.interests | join:',' | append:',' %}{% assign interest_tags = interest_tags | append:ttags %}{% endfor %}{% assign all_tags = site_tags | append:interest_tags %}{%- assign tags_list = all_tags | split:',' | uniq | sort -%}
 
 <div class="row">
     <div class="col-md-9">
