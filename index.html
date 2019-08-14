@@ -9,12 +9,12 @@ subtitle: A Jekyll Template for a beautiful Bootstrap 4 Theme
    <div class="col-md-6 card" style="padding:50px; border:none">
        <h5 style="font-weight:800">About Us</h5>
        {% capture about %}{% include text/about.html %}{% endcapture %}
-       {{ about | truncatewords: 80 }}<a href="{{ site.baseurl }}/about/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
+       {{ about | truncatewords: 78 }}<a href="{{ site.baseurl }}/about/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
    </div>
    <div class="col-md-6 card" style="padding:50px; border:none">
        <h5 style="font-weight:800">Projects</h5>
        {% capture projects %}{% include text/projects.html %}{% endcapture %}
-       {{ projects | truncatewords: 80 }}<a href="{{ site.baseurl }}/projects/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
+       {{ projects | truncatewords: 78 }}<a href="{{ site.baseurl }}/projects/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
    </div>
 </div>
 
