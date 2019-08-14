@@ -1,7 +1,7 @@
 ---
 layout: post
 title: We've Got a New Look!
-subtitle: by Vanessa Sochat
+subtitle: by @vsoch
 tags: [website, communication]
 ---
 
