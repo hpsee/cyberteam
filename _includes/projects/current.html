@@ -1,0 +1,32 @@
+<br>
+
+<h3>New and Recruiting</h3>
+<ul class="list-group">
+{% for project in site.projects %}{% if project.status == "New and recruiting" %}<a href="{{ site.baseurl }}/{{ project.url }}"><li class="list-group-item list-group-item-success">{{ project.title }}: {{ project.status }}</li></a>{% endif %}{% endfor %}
+</ul>
+
+<br>
+<hr>
+
+
+<h3>In Progress</h3>
+<ul class="list-group">
+{% for project in site.projects %}{% if project.status == "In progress" %}<a href="{{ site.baseurl }}/{{ project.url }}"><li class="list-group-item list-group-item-warning">{{ project.title }}: {{ project.status }}</li></a>{% endif %}{% endfor %}
+</ul>
+
+<br>
+<hr>
+
+<h3>Finishing Up</h3>
+<ul class="list-group">
+{% for project in site.projects %}{% if project.status == "Finishing up" %}<a href="{{ site.baseurl }}/{{ project.url }}"><li class="list-group-item list-group-item-primary">{{ project.title }}: {{ project.status }}</li></a>{% endif %}{% endfor %}
+</ul>
+
+<br>
+<hr>
+
+<h3>Complete</h3>
+<ul class="list-group">
+{% for project in site.projects %}{% if project.status == "Complete" %}<a href="{{ site.baseurl }}/{{ project.url }}"><li class="list-group-item list-group-item-info">{{ project.title }}: {{ project.status }}</li></a>{% endif %}{% endfor %}
+</ul>
+

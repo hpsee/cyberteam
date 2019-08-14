@@ -1,0 +1,11 @@
+---
+title:  Linux Tutorial
+tags: [bash, filesystem, unix environment]
+levels: [Beginner]
+links: 
+ - title: Linux Tutorial
+   url: https://ryanstutorials.net/linuxtutorial/
+---
+
+The following pages are intended to give you a solid foundation in how to use the terminal, to get the computer to do useful work for you. You won't be a Unix guru at the end but you will be well on your way and armed with the right knowledge and skills to get you there if that's what you want (which you should because that will make you even more awesome). Here you will learn the Linux command line (Bash) with our 13 part beginners tutorial. It contains clear descriptions, command outlines, examples, shortcuts and best practice. At first, the Linux command line may seem daunting, complex and scary. It is actually quite simple and intuitive (once you understand what is going on that is), and once you work through the following sections you will understand what is going on. Unix likes to take the approach of giving you a set of building blocks and then letting you put them together. This allows us to build things to suit our needs. With a bit of creativity and logical thinking, mixed in with an appreciation of how the blocks work, we can assemble tools to do virtually anything we want. The aim is to be lazy. Why should we do anything we can get the computer to do for us? The only reason I can think of is that you don't know how (but after working through these pages you will know how, so then there won't be a good reason). A question that may have crossed your mind is "Why should I bother learning the command line? The Graphical User Interface is much easier and I can already do most of what I need there." To a certain extent you would be right, and by no means am I suggesting you should ditch the GUI. Some tasks are best suited to a GUI, word processing and video editing are great examples. At the same time, some tasks are more suited to the command line, data manipulation (reporting) and file management are some good examples. Some tasks will be just as easy in either environment. Think of the command line as another tool you can add to your belt. As always, pick the best tool for the job.
+

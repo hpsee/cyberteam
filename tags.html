@@ -3,7 +3,8 @@ layout: wide
 title: Tag Index
 ---
 
-{% capture site_tags %}{% for tag in site.tags %}{% if tag %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endcapture %}{% assign interest_tags = "" %}{% for person in site.people %}{% assign ttags = person.interests | join:',' | append:',' %}{% assign interest_tags = interest_tags | append:ttags %}{% endfor %}{% assign all_tags = site_tags | append:interest_tags %}{%- assign tags_list = all_tags | split:',' | uniq | sort -%}
+{% capture site_tags %}{% for tag in site.tags %}{% if tag %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endcapture %}{% assign interest_tags = "" %}{% for person in site.people %}{% assign ttags = person.interests | join:',' | append:',' %}{% assign interest_tags = interest_tags | append:ttags %}{% endfor %}
+{% assign levels_tags = "" %}{% for resource in site.resources %}{% assign rtags = resource.levels | join:',' | append:',' %}{% assign levels_tags = levels_tags | append:rtags %}{% endfor %}{% assign all_tags = site_tags | append:interest_tags | append:levels_tags %}{% assign tags_list = all_tags | split:',' | uniq | sort %}
 
 <div class="row">
     <div class="col-md-9">
@@ -17,6 +18,11 @@ title: Tag Index
 <div class="tag-entry">
                 <a href="{{- site.baseurl -}}{{- person.url -}}">{{ person.status | join: "," | capitalize }}: {{ person.name }}</a>
                      <time datetime="{{- post.date | date_to_xmlschema -}}"> {{- person.date | date: "%B %d, %Y" -}}</time>
+            </div>{% endif %}{% endfor %}
+            {% for resource in site.resources %}{% if resource.levels contains tag %}
+            <div class="tag-entry">
+                <a href="{{- site.baseurl -}}{{- resource.url -}}">Resource: {{ resource.title }}</a>
+                     <time datetime="{{- post.date | date_to_xmlschema -}}"> {{- resource.date | date: "%B %d, %Y" -}}</time>
             </div>{% endif %}{% endfor %}
     </div>{% endif %}{%- endfor -%}
     </div>

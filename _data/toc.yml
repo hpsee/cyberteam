@@ -9,6 +9,8 @@
         - title: Overview
           subtitle: "About Projects:"
           url: "/projects/"
+        - title: Current Projects
+          url: "/pages/projects/current/"
         - title: Submit a Project
           url: "pages/projects/submit/"
 - title: Membership
@@ -25,4 +27,6 @@
         - title: Join the Team
           url: pages/people/join/
 - title: Resources
-  url: docs/tables/
+  url: docs/resources/
+- title: Support
+  url: docs/support/

@@ -1,0 +1,31 @@
+---
+layout: wide
+---
+
+      {% if page.tags.size > 0 %}<div class="blog-tags">
+          {% if site.link-tags %}{% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags#{{- tag -}}"><span class="badge badge-primary">{{- tag -}}</span></a>
+          {% endfor %}{% else %}{{ page.tags | join: ", " }}{% endif %}
+       </div>{% endif %}
+
+      {% if page.levels.size > 0 %}<div class="blog-tags">
+          {% for level in page.levels %}
+            <a href="{{ site.baseurl }}/tags#{{ level }}"><span class="badge badge-success">{{ level }}</span></a>
+          {% endfor %}
+       </div>{% endif %}
+
+<div class="row" style="flex-direction:unset; padding-top:20px">
+    <div class="col-md-12">
+
+     {% if page.image %}<img style="float:right; padding-left:20px; padding-bottom:20px" src="{{ site.baseurl }}/assets/img/projects/{{ page.image }}">{% endif %}
+
+     <div id="the-content">
+      {{ content }}
+     </div>
+
+      {% for link in resource.links %}
+      {% include buttons/split-button.html style="success" title=link.title icon="fa-link" url=link.url %}
+      {% endfor %}
+      <hr>
+    </div>
+  </div>

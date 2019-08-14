@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: wide
 ---
 
-<div class="container">
-  <div class="row card" style="padding:30px; flex-direction:unset">
+  <div class="row" style="padding-top:30px; flex-direction:unset">
     <div class="col-md-9">
  
-     <h2>{{ page.title }}</h2>
+     {% if page.subtitle %}<h4>{{ page.subtitle }}</h4>{% endif %}
      <em>Posted on {{ page.date | date: "%B %-d, %Y" }}</em>
      <hr>
       <article role="main" id="the-content" class="blog-post">
@@ -33,4 +32,3 @@ layout: default
     <div class="col-md-3" id="toc" data-md-scrollfix>
     </div>
   </div>
-</div>

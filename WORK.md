@@ -7,3 +7,5 @@
  - August 12th:
    - Morning: 4 hours to flatten design, finish adding all students, researchers, mentors, create project template
    - Afternoon: 3 hours to add all projects and images, clean up design
+ - August 14:
+   - Morning: 3.5 hours to add all resources, submit project page, finish front page, post

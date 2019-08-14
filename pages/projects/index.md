@@ -3,4 +3,4 @@ title: Projects
 permalink: /projects/
 ---
 
-We are seeking a few exceptional individuals to participate! We are looking for undergraduate or graduate students who have some research computing experience, and are interested in learning more. If matched to a project, you will be assigned a mentor, and together you will provide research computing assistance to a researcher working on a computationally intensive project. Current projects are listed below. Stipends are available for all student participants. Join the team to apply for a project!
+{% include text/projects.html %}

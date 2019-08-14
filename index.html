@@ -5,9 +5,40 @@ subtitle: A Jekyll Template for a beautiful Bootstrap 4 Theme
 ---
 
 {% if site.projects %}{% include project-showcase.html %}{% endif %}
+<div class="row">
+   <div class="col-md-6 card" style="padding:50px; border:none">
+       <h5 style="font-weight:800">About Us</h5>
+       {% capture about %}{% include text/about.html %}{% endcapture %}
+       {{ about | truncatewords: 80 }}<a href="{{ site.baseurl }}/about/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
+   </div>
+   <div class="col-md-6 card" style="padding:50px; border:none">
+       <h5 style="font-weight:800">Projects</h5>
+       {% capture projects %}{% include text/projects.html %}{% endcapture %}
+       {{ projects | truncatewords: 80 }}<a href="{{ site.baseurl }}/projects/"><button style="float:right" class="btn btn-primary btn-sm">Read More</button></a>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-md-3 card" style="padding:30px; border:none">
+   </div>
+   <div class="col-md-2 card" style="padding:30px; border:none">
+       <a href="{{ site.baseurl }}/docs/support/"><p style="text-align:center">Get Help</p>
+       <img width="100%" src="{{ site.basurl }}assets/img/question-face.png"></a>
+   </div>
+   <div class="col-md-2 card" style="padding:30px; border:none">
+       <a href="{{ site.baseurl }}/pages/projects/submit/"><p style="text-align:center">Submit A project</p>
+       <img width="100%" src="{{ site.basurl }}assets/img/button-submit.png"></a>
+   </div>
+   <div class="col-md-2 card" style="padding:30px; border:none">
+       <a href="{{ site.baseurl }}/pages/people/join/"><p style="text-align:center">Join the Team</p>
+       <img width="100%" src="{{ site.basurl }}assets/img/join-the-team.png"></a>
+   </div>
+   <div class="col-md-3 card" style="padding:30px; border:none">
+   </div>
+</div>
           {% for post in paginator.posts %}<div class="row">
             <div class="col-xl-12 col-lg-11">
-              <div class="card shadow mb-4">
+              <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <a href="{{ post.url | prepend: site.baseurl }}"><h6 class="m-0 font-weight-bold text-primary">{{ post.title }}</h6></a>
                   <div class="dropdown no-arrow">
@@ -25,7 +56,7 @@ subtitle: A Jekyll Template for a beautiful Bootstrap 4 Theme
                 <!-- Card Body -->
                 <div class="card-body">
                   <div>
-                   {% if post.subtitle %}<h3 class="post-subtitle">{{ post.subtitle }}{% endif %}</h3>
+                   {% if post.subtitle %}<h5 class="post-subtitle">{{ post.subtitle }}{% endif %}</h5>
                    <p class="post-meta">
                      <em>Posted on {{ post.date | date: "%B %-d, %Y" }}</em>
                    </p>
